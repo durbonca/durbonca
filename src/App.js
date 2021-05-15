@@ -1,12 +1,12 @@
 import { Switch, Route } from 'react-router-dom'
-import {HeaderContainer} from './containers'
+// import {HeaderContainer} from './containers'
 import {Home, Projects} from './pages'
 import './App.css';
 
 function App() {
   return (
     <div>
-      <HeaderContainer/>
+      {/* <HeaderContainer/> */}
 
       <Switch>
           <Route exact path="/" >

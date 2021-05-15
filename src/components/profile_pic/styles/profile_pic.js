@@ -4,6 +4,7 @@ export const Container = styled.div`
    
 `
 export const BoxFrame = styled.div`
+    border-radius: 10px;
     width: fit-content;
     height: fit-content;
     background-color: #7EDA56;

@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import { Container, Image, Border, BoxFrame } from './styles/profile_pic'
 
 
@@ -21,6 +21,15 @@ ProfilePic.BoxFrame = function ProfilePicBoxFrame({children, ...restPros}) {
 
 ProfilePic.Image = function ProfilePicImage({...restPros}) {
     const [randomPic, setRandomPic] = useState(1)
+    const PIC_LENGTH = 5
+    useEffect(()=> {
+            let random = randomPic
+            while(random === randomPic)
+                { random = Math.ceil(Math.random() * PIC_LENGTH) }
+            const timer = setTimeout( () => setRandomPic(random), 5000) 
+            return () => clearTimeout(timer);
+        }
+        , [randomPic])
 
     return (<Image src={`../assets/profile_pics/${randomPic}.jpeg`} {...restPros}/>)
 }

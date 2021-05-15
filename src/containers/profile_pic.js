@@ -1,13 +1,7 @@
-import { ProfilePic, Card } from '../components/'
+import { ProfilePic } from '../components/'
 
 export function ProfilePicContainer (){
     return (
-        <>
-        <Card>
-            <Card.Body>
-                Hi! My Name Is
-            </Card.Body>
-        </Card>
         <ProfilePic>
             <ProfilePic.BoxFrame>
                 <ProfilePic.Border>
@@ -15,6 +9,5 @@ export function ProfilePicContainer (){
                 </ProfilePic.Border>
             </ProfilePic.BoxFrame>    
         </ProfilePic>
-        </>
     )
 }

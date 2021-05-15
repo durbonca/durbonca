@@ -1,3 +1,4 @@
+import { CardBody } from './styles/card'
 
 export default function Card ({children, ...restProps}) {
     return(
@@ -5,8 +6,8 @@ export default function Card ({children, ...restProps}) {
     )
 }
 
-Card.Picture = function CardPicture ({ ...restProps}){
+Card.Body = function CardBody ({children, ...restProps}){
     return (
-        <img {...restProps} alt="CardPicture"/>
+        <CardBody {...restProps}>{children}</CardBody>
     )
 }

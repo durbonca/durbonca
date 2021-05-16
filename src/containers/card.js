@@ -11,6 +11,8 @@ export function CardContainer (){
                 </Card.TitleText>
                 <Card.Space/>
             </Card.Body>
+
+            <Card.Carreer>Web Developer</Card.Carreer>
         </Card>
     )
 }

@@ -14,15 +14,22 @@ export const Title = styled.h1`
     font-size: 3rem;
 `
 
-export const TitleText = styled.h2` 
+export const TitleText = styled.h2`
     font-size: 1.5rem;
 `
 
 export const Name = styled.p`
+    font-family: 'Pangolin';
     background-color: #fff;
     font-size: 1.8rem;
     color: #333;
 `
 export const Space = styled.div`
     height: 2rem;
+`
+
+export const Carreer = styled.h2`
+    margin:2rem auto;
+    font-size: 3rem;
+    font-family: 'Pangolin';
 `

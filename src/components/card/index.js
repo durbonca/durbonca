@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Body, Title, TitleText, Name, Space } from './styles/card'
+import { Body, Title, TitleText, Name, Space, Carreer } from './styles/card'
 
 export default function Card ({children, ...restProps}) {
     return(
-        <div className="relative z-10" {...restProps}>{children}</div>
+        <div className="flex flex-col-reverse relative z-10" {...restProps}>{children}</div>
     )
 }
 
@@ -32,7 +32,7 @@ Card.Name = function CardName ({children, ...restProps}){
 
     useEffect(()=> {
         setTimeout(()=> {    
-            setDisplayName(arraysNames[0])
+            setDisplayName(arraysNames[0]) // ToDo that cool effect of type words
         }
         ,500)
     },[displayName])
@@ -48,3 +48,8 @@ Card.Space = function CardSpace ({...restProps}){
     )
 }
 
+Card.Carreer = function CardCarreer ({children, ...restProps}){
+    return (
+        <Carreer {...restProps}>{children}</Carreer>
+    )
+}

@@ -1,21 +1,22 @@
-import { Switch, Route } from 'react-router-dom'
-// import {HeaderContainer} from './containers'
-import {Home, Projects} from './pages'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { HeaderContainer } from './containers';
+import { Home, Projects, Resume, Blog, Contact } from './pages';
+import { Footer } from './components';
 import './App.css';
 
 function App() {
   return (
     <div>
-      {/* <HeaderContainer/> */}
-
-      <Switch>
-          <Route exact path="/" >
-            <Home/>
-          </Route>
-          <Route exact path="/projects" >
-            <Projects/>
-          </Route>
-      </Switch>
+      <HeaderContainer />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/CVresume" element={<Resume />} />
+        <Route exact path="/projects" element={<Projects />} />
+        <Route exact path="/blog" element={<Blog />} />
+        <Route exact path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

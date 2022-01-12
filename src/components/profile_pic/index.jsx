@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { Container, Image, Border, BoxFrame } from './styles/profile_pic';
 

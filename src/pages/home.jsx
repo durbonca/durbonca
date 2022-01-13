@@ -5,7 +5,7 @@ import { ProfilePicContainer } from '../containers/profile_pic';
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col items-center justify-around md:flex-row gradient-bg-services">
+      <div className="flex flex-col min-h-screen items-center justify-around md:flex-row gradient-bg-services">
         <CardContainer />
         <ProfilePicContainer />
       </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ProjectCard, ProjectsFilter } from '../components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -10,7 +10,25 @@ import 'swiper/css/scrollbar';
 import SwiperCore, { Navigation } from 'swiper';
 SwiperCore.use([Navigation]);
 
-function ProjectsContainer() {
+function ProjectsContainer({ db }) {
+  const [projects, setProjects] = useState([]);
+
+  const getProjects = () => {
+    db.collection('projects').onSnapshot((snapshot) => {
+      const projects = [];
+      snapshot.forEach((doc) => {
+        projects.push({ id: doc.id, ...doc.data() });
+      });
+      setProjects(projects);
+    });
+  };
+
+  useEffect(() => {
+    getProjects();
+  }, []);
+
+  console.log('projects', projects);
+
   return (
     <div className="px-5">
       <ProjectsFilter />
@@ -38,33 +56,11 @@ function ProjectsContainer() {
           },
         }}
       >
-        <SwiperSlide>
-          <ProjectCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProjectCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProjectCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProjectCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProjectCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProjectCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProjectCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProjectCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProjectCard />
-        </SwiperSlide>
+        {projects.map((project) => (
+          <SwiperSlide key={project.id}>
+            <ProjectCard project={project} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

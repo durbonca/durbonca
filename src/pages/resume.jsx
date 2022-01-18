@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 
 export default function Resume() {
   return (
-    <div className="min-h-screen py-4">
+    <div className="min-h-screen mx-auto py-4 max-w-4xl">
       <div className="flex justify-center">
         <Button variant="outlined">
           <a className="p-4" href="./assets/CV_MANUEL_DURAN.pdf" download>
@@ -11,8 +11,8 @@ export default function Resume() {
           </a>
         </Button>
       </div>
-      <div className="flex flex-col items-start justify-center px-10 py-10">
-        <h1 className="text-xl font-bold">Manuel Duran</h1>
+      <div className="flex flex-col items-start justify-center px-10 py-10 text-justify">
+        <h1 className="text-4xl font-bold">Manuel Duran</h1>
         <div className="w-full border-solid border-b-2 border-black" />
         <h2 className="font-bold my-4">Career Summary</h2>
         <p className="my-4">
@@ -41,7 +41,7 @@ export default function Resume() {
           <li className="mx-7">Scrum</li>
         </ul>
 
-        <h2 className="font-bold">Languages</h2>
+        <h2 className="font-bold mb-4">Languages</h2>
         <ul className="list-disc flex flex-wrap">
           <li className="mx-7">Spanish (native speaker)</li>
           <li className="mx-7">English (advance)</li>

@@ -16,8 +16,8 @@ const NavbarItem = ({ title, classProps, link, setToggleMenu }) => {
   );
 };
 
-const menuList = ['Portfolio Projects', 'CV Resume', 'Blog', 'Contact'];
-const menuLink = ['/Projects', '/CVResume', '/Blog', '/Contact'];
+const menuList = ['Portfolio Projects', 'CV Resume', 'Contact'];
+const menuLink = ['/Projects', '/CVResume', '/Contact'];
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -33,7 +33,6 @@ const Navbar = () => {
         {menuList.map((title, index) => {
           return <NavbarItem link={menuLink[index]} key={index} title={title} classProps="text-white" />;
         })}
-        {/* <li className="bg-[#2952e9] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">Login</li> */}
       </ul>
       <div className="flex relative">
         {toggleMenu ? (

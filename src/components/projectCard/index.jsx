@@ -7,10 +7,10 @@ import { ButtonStyled, AccordionStyled, AccordionDetailsStyled } from './styles/
 
 function ProjectCard() {
   return (
-    <div className="flex flex-col border-solid m-3 p-6 rounded-xl shadow-lg blue-glassmorphism min-w-fit max-w-[350px]">
-      <h1 className="text-2xl">Titulo</h1>
+    <div className="flex flex-col border-solid m-3 p-6 rounded-xl shadow-lg blue-glassmorphism w-[300px]">
+      <h1 className="text-2xl text-white">Titulo</h1>
       <img className="w-5/6 h-40 object-cover mx-auto my-2 rounded-2xl shadow-lg" src="https://picsum.photos/200/200" />
-      <p className="my-2 text-sm">small caption</p>
+      <p className="my-2 text-sm text-white">small caption</p>
       <AccordionStyled>
         <AccordionSummary
           expandIcon={<MdExpandMore style={{ color: 'white' }} />}

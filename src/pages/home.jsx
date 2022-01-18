@@ -1,6 +1,6 @@
 import React from 'react';
 import { CardContainer } from '../containers/card';
-import { ProfilePicContainer } from '../containers/profile_pic';
+import { ProfilePicContainer } from '../containers/profilePic';
 
 export default function Home() {
   return (

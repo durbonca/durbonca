@@ -1,20 +1,23 @@
 import React from 'react';
-import { ProjectCard } from '../components';
-import { ProjectsFilter } from '../components';
-import { ProjectsCarousel } from '../components/';
+import { ProjectCard, ProjectsFilter } from '../components';
+// import HorizontalScroll from 'react-horizontal-scrolling';
+// import HorizontalScroller from 'react-horizontal-scroll-container';
 
 function ProjectsContainer() {
   return (
-    <>
+    <div className="px-5">
       <ProjectsFilter />
-      <ProjectsCarousel>
+      <div className="flex overflow-x-scroll">
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />
-      </ProjectsCarousel>
-    </>
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </div>
+    </div>
   );
 }
 

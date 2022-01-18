@@ -1,22 +1,51 @@
 import React from 'react';
 import { ProjectCard, ProjectsFilter } from '../components';
-// import HorizontalScroll from 'react-horizontal-scrolling';
-// import HorizontalScroller from 'react-horizontal-scroll-container';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 function ProjectsContainer() {
   return (
     <div className="px-5">
       <ProjectsFilter />
-      <div className="flex overflow-x-scroll">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-      </div>
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={3}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+      >
+        <SwiperSlide>
+          <ProjectCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProjectCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProjectCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProjectCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProjectCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProjectCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProjectCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProjectCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProjectCard />
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 }

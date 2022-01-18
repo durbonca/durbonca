@@ -18,16 +18,22 @@ function ProjectsContainer() {
         spaceBetween={10}
         navigation
         scrollbar={{ draggable: true }}
-        pagination={{ el: '.swiper-pagination', type: 'bullets', clickable: true }}
+        pagination={{ clickable: true }}
         allowTouchMove={true}
         breakpoints={{
-          1024: {
+          1710: {
+            slidesPerView: 5,
+          },
+          1368: {
+            slidesPerView: 4,
+          },
+          1026: {
             slidesPerView: 3,
           },
-          500: {
+          684: {
             slidesPerView: 2,
           },
-          300: {
+          342: {
             slidesPerView: 1,
           },
         }}

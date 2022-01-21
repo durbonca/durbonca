@@ -22,6 +22,7 @@ function ProjectsContainer({ db }) {
         projects.push({ id: doc.id, ...doc.data() });
       });
       setProjects(projects);
+      setFilterProjects(projects);
     });
   };
 

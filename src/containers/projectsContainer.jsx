@@ -12,8 +12,10 @@ SwiperCore.use([Navigation]);
 
 function ProjectsContainer({ db }) {
   const [projects, setProjects] = useState([]);
+  const [filterProjects, setFilterProjects] = useState([]);
+  const [activeCategories, setActiveCategories] = useState([]);
 
-  const getProjects = () => {
+  const getAllProjects = () => {
     db.collection('projects').onSnapshot((snapshot) => {
       const projects = [];
       snapshot.forEach((doc) => {
@@ -24,14 +26,23 @@ function ProjectsContainer({ db }) {
   };
 
   useEffect(() => {
-    getProjects();
-  }, []);
+    if (activeCategories[0] !== null) {
+      const projectsFiltered = projects.filter((project) => {
+        return project.categoriesProjects?.includes(activeCategories[0]);
+      });
+      setFilterProjects(projectsFiltered);
+    } else {
+      setFilterProjects(projects);
+    }
+  }, [activeCategories]);
 
-  console.log('projects', projects);
+  useEffect(() => {
+    getAllProjects();
+  }, []);
 
   return (
     <div className="px-5">
-      <ProjectsFilter />
+      <ProjectsFilter db={db} setActiveCategories={setActiveCategories} />
       <Swiper
         spaceBetween={10}
         navigation
@@ -56,7 +67,7 @@ function ProjectsContainer({ db }) {
           },
         }}
       >
-        {projects.map((project) => (
+        {filterProjects.map((project) => (
           <SwiperSlide key={project.id}>
             <ProjectCard project={project} />
           </SwiperSlide>

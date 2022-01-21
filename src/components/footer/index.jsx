@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
 
 const Footer = () => {
@@ -9,8 +10,15 @@ const Footer = () => {
           <img src={logo} alt="logo" className="w-32" />
         </div>
         <div className="flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full">
-          <p className="text-white text-base text-center mx-2 cursor-pointer">Portfolio Projects</p>
-          <p className="text-white text-base text-center mx-2 cursor-pointer">Cv Resume</p>
+          <Link to="/" className="text-white text-base text-center mx-2 cursor-pointer">
+            Home
+          </Link>
+          <Link to="/projects" className="text-white text-base text-center mx-2 cursor-pointer">
+            Portfolio Projects
+          </Link>
+          <Link to="/CVresume" className="text-white text-base text-center mx-2 cursor-pointer">
+            Cv Resume
+          </Link>
           <a
             className="text-white text-base text-center mx-2 cursor-pointer"
             href="./assets/CV_MANUEL_DURAN.pdf"
@@ -18,8 +26,9 @@ const Footer = () => {
           >
             Download Resume
           </a>
-          <p className="text-white text-base text-center mx-2 cursor-pointer">Blog</p>
-          <p className="text-white text-base text-center mx-2 cursor-pointer">Contact</p>
+          <Link to="/Contact" className="text-white text-base text-center mx-2 cursor-pointer">
+            Contact
+          </Link>
         </div>
       </div>
       <div className="flex flex-col justify-center items-center mt-5">

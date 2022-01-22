@@ -4,10 +4,15 @@ import Button from '@mui/material/Button';
 export default function Resume() {
   return (
     <div className="min-h-screen mx-auto py-4 max-w-4xl">
-      <div className="flex justify-center">
+      <div className="flex justify-evenly flex-wrap gap-2">
         <Button variant="outlined">
           <a className="p-4" href="./assets/CV_MANUEL_DURAN.pdf" download>
             Download resume
+          </a>
+        </Button>
+        <Button variant="outlined">
+          <a className="p-4" href="https://github.com/durbonca/Certifications" target="_blank" rel="noreferrer">
+            Check Certifications
           </a>
         </Button>
       </div>

@@ -43,7 +43,7 @@ export default function Contact() {
       </p>
       <p className="text-lg">I promise to respond as quickly as possible!</p>
       <div className="my-10 w-1/2">
-        <img className="mx-auto max-h-[calc(vh/6)]" src={gifUrl} />
+        <img className="mx-auto max-h-[calc(100vh/6)]" src={gifUrl} />
       </div>
 
       <p>Also check this links for social if you want to have a close look at me.</p>

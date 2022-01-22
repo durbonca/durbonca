@@ -19,7 +19,7 @@ function ProjectsFilter({ db, setActiveCategories }) {
   }, []);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', margin: '0 20px 20px' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
       <CategoryBadge setActiveCategories={setActiveCategories} title="All" id={null} />
       {categories.map((cat) => (
         <CategoryBadge setActiveCategories={setActiveCategories} key={cat.id} title={cat.title} id={cat.id} />

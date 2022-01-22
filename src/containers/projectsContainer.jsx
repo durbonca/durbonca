@@ -42,38 +42,40 @@ function ProjectsContainer({ db }) {
   }, []);
 
   return (
-    <div className="px-5">
+    <div className="p-5 flex flex-col justify-start" style={{ minHeight: 'inherit' }}>
       <ProjectsFilter db={db} setActiveCategories={setActiveCategories} />
-      <Swiper
-        spaceBetween={10}
-        navigation
-        scrollbar={{ draggable: true }}
-        pagination={{ clickable: true }}
-        allowTouchMove={true}
-        breakpoints={{
-          1710: {
-            slidesPerView: 5,
-          },
-          1368: {
-            slidesPerView: 4,
-          },
-          1026: {
-            slidesPerView: 3,
-          },
-          684: {
-            slidesPerView: 2,
-          },
-          342: {
-            slidesPerView: 1,
-          },
-        }}
-      >
-        {filterProjects.map((project) => (
-          <SwiperSlide key={project.id}>
-            <ProjectCard project={project} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="my-auto">
+        <Swiper
+          spaceBetween={10}
+          navigation
+          scrollbar={{ draggable: true }}
+          pagination={{ clickable: true }}
+          allowTouchMove={true}
+          breakpoints={{
+            1710: {
+              slidesPerView: 5,
+            },
+            1368: {
+              slidesPerView: 4,
+            },
+            1026: {
+              slidesPerView: 3,
+            },
+            684: {
+              slidesPerView: 2,
+            },
+            342: {
+              slidesPerView: 1,
+            },
+          }}
+        >
+          {filterProjects.map((project) => (
+            <SwiperSlide key={project.id}>
+              <ProjectCard project={project} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 }

@@ -54,7 +54,7 @@ export default function Resume() {
 
         <h2 className="font-bold mt-8 mb-4">Career History</h2>
         <div className="mt-2">
-          <div className="flex w-full justify-between">
+          <div className="flex w-full justify-between gap-6">
             <h3 className="font-bold">AMICAR, Santiago, Chile</h3>
             <p className="text-xs">Jun. 2021 – Nowadays</p>
           </div>
@@ -76,7 +76,7 @@ export default function Resume() {
         </div>
 
         <div className="mt-8">
-          <div className="flex w-full justify-between">
+          <div className="flex w-full justify-between gap-6">
             <h3 className="font-bold">BACO Restaurant, Santiago, Chile</h3>
             <p className="text-xs">Feb. 2020 – May. 2021</p>
           </div>
@@ -97,7 +97,7 @@ export default function Resume() {
         </div>
 
         <h2 className="font-bold mt-8 mb-4">Education</h2>
-        <div className="flex w-full justify-between">
+        <div className="flex w-full justify-between gap-6">
           <h3 className="font-bold">territorial polytechnic university of Aragua, La Victoria, Venezuela</h3>
           <p className="text-xs">Jan. 2009 – Jun. 2014</p>
         </div>

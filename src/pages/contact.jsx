@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AiFillGithub, AiFillYoutube, AiOutlineTwitter, AiFillLinkedin } from 'react-icons/ai';
 
 export default function Contact() {
   const api_key = process.env.REACT_APP_GIPHY_API_KEY;
@@ -42,8 +43,26 @@ export default function Contact() {
       </p>
       <p className="text-lg">I promise to respond as quickly as possible!</p>
       <div className="my-10 w-1/2">
-        <img className="w-full" src={gifUrl} />
+        <img className="mx-auto max-h-[calc(vh/6)]" src={gifUrl} />
       </div>
+
+      <p>Also check this links for social if you want to have a close look at me.</p>
+      <div className="flex flex-row justify-center py-2">
+        <a className="m-2" href="https://github.com/durbonca" target="_blank" rel="noopener noreferrer">
+          <AiFillGithub className="text-4xl" />
+        </a>
+        <a className="m-2" href="https://youtube.com/durbonca" target="_blank" rel="noopener noreferrer">
+          <AiFillYoutube className="text-4xl" />
+        </a>
+        <a className="m-2" href="https://twitter.com/durbonca" target="_blank" rel="noopener noreferrer">
+          <AiOutlineTwitter className="text-4xl" />
+        </a>
+        <a className="m-2" href="https://www.linkedin.com/in/durbonca/" target="_blank" rel="noopener noreferrer">
+          <AiFillLinkedin className="text-4xl" />
+        </a>
+      </div>
+
+      <small className="italic">But I warn you... I have null time to check the socials networks.</small>
     </div>
   );
 }

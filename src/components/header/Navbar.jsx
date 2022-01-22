@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { HiMenuAlt4 } from 'react-icons/hi';
+import { HiMenu } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 import logo from '../../images/logo.png';
 import PropTypes from 'prop-types';
@@ -36,9 +36,12 @@ const Navbar = () => {
       </ul>
       <div className="flex relative">
         {toggleMenu ? (
-          <AiOutlineClose className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(false)} />
+          <AiOutlineClose
+            className="text-white md:hidden cursor-pointer text-3xl"
+            onClick={() => setToggleMenu(false)}
+          />
         ) : (
-          <HiMenuAlt4 className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(true)} />
+          <HiMenu className="text-white md:hidden cursor-pointer text-3xl" onClick={() => setToggleMenu(true)} />
         )}
         {toggleMenu && (
           <ul
@@ -46,7 +49,7 @@ const Navbar = () => {
                        blue-glassmorphism text-white flex-initial list-none justify-start items-end rounded-md"
           >
             <li className="text-xl w-full my-2">
-              <AiOutlineClose onClick={() => setToggleMenu(false)} />
+              <AiOutlineClose className="text-3xl" onClick={() => setToggleMenu(false)} />
             </li>
             {menuList.map((title, index) => {
               return (

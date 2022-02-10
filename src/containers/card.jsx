@@ -13,7 +13,7 @@ export function CardContainer() {
         <Card.Space />
       </Card.Body>
 
-      <Card.Carreer className="text-white">Web Developer</Card.Carreer>
+      <Card.Carreer className="text-white">Web UI Developer</Card.Carreer>
     </Card>
   );
 }

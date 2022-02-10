@@ -51,10 +51,10 @@ export default function Resume() {
 
         <div className="mt-2">
           <div className="flex w-full justify-between gap-6">
-            <h3 className="font-bold">AMICAR, Santiago, Chile</h3>
+            <h3 className="font-bold">GLOBANT, Santiago, Chile</h3>
             <p className="text-xs">Feb. 2022 – Nowadays</p>
           </div>
-          <p className="italic font-light text-xs">Web Developer UI</p>
+          <p className="italic font-light text-xs">Web UI Developer</p>
         </div>
 
         <div className="mt-2">

@@ -6,7 +6,7 @@ export default function Resume() {
     <div className="min-h-screen mx-auto py-4 max-w-4xl">
       <div className="flex justify-evenly flex-wrap gap-2">
         <Button variant="outlined">
-          <a className="p-4" href="./assets/CV_MANUEL_DURAN.pdf" download>
+          <a className="p-4" href="./assets/2c7630e851d84fd384704bf7bab428f6.pdf" download>
             Download resume
           </a>
         </Button>
@@ -32,18 +32,13 @@ export default function Resume() {
           <li className="mx-7">CSS</li>
           <li className="mx-7">JavaScript</li>
           <li className="mx-7">React</li>
-          <li className="mx-7">NodeJS</li>
-          <li className="mx-7">Express</li>
-          <li className="mx-7">MongoDB</li>
-          <li className="mx-7">PostgreSQL</li>
           <li className="mx-7">Material UI</li>
-          <li className="mx-7">Tailwind</li>
-          <li className="mx-7">GCP</li>
+          <li className="mx-7">Gastby</li>
+          <li className="mx-7">Mongo</li>
+          <li className="mx-7">PostgreSQL</li>
+          <li className="mx-7">Apollo Graph</li>
+          <li className="mx-7">Google Cloud</li>
           <li className="mx-7">Netlify</li>
-          <li className="mx-7">Git</li>
-          <li className="mx-7">GitHub</li>
-          <li className="mx-7">Agile Methodologies</li>
-          <li className="mx-7">Scrum</li>
         </ul>
 
         <h2 className="font-bold mb-4">Languages</h2>
@@ -53,10 +48,19 @@ export default function Resume() {
         </ul>
 
         <h2 className="font-bold mt-8 mb-4">Career History</h2>
+
         <div className="mt-2">
           <div className="flex w-full justify-between gap-6">
             <h3 className="font-bold">AMICAR, Santiago, Chile</h3>
-            <p className="text-xs">Jun. 2021 – Nowadays</p>
+            <p className="text-xs">Feb. 2022 – Nowadays</p>
+          </div>
+          <p className="italic font-light text-xs">Web Developer UI</p>
+        </div>
+
+        <div className="mt-2">
+          <div className="flex w-full justify-between gap-6">
+            <h3 className="font-bold">AMICAR, Santiago, Chile</h3>
+            <p className="text-xs">Jun. 2021 – Feb. 2022</p>
           </div>
           <p className="italic font-light text-xs">Frontend Developer</p>
           <ul className="list-disc text-xs pt-2 pl-4">
@@ -92,6 +96,20 @@ export default function Resume() {
             </li>
             <li className="my-2">
               Updating and modernization of the website and different digital channels of the company.
+            </li>
+          </ul>
+        </div>
+
+        <div className="mt-8">
+          <div className="flex w-full justify-between gap-6">
+            <h3 className="font-bold">SMARTBOT, Santiago, Chile</h3>
+            <p className="text-xs">Feb. 2017 – May. 2020</p>
+          </div>
+          <p className="italic font-light text-xs">Technical Developer</p>
+          <ul className="list-disc text-xs pt-2 pl-4">
+            <li className="my-2">Assembly and commissioning of solutions in applied robotics services.</li>
+            <li className="my-2">
+              Programmer, designer and maintenance of security robotics equipment and user service.
             </li>
           </ul>
         </div>
